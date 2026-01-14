@@ -1,0 +1,33 @@
+# .gitignore
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Uploads
+backend/uploads/profiles/*.jpg
+backend/uploads/profiles/*.png
+backend/uploads/profiles/*.gif
+!backend/uploads/profiles/.gitkeep
