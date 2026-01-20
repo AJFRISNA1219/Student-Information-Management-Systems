@@ -41,7 +41,7 @@ function AdminLogin() {
     return (
         <div className="page">
             <div className="page-content flex-center">
-                <div className="container-sm">
+                <div className="container-xs">
                     <div className="card">
                         <div className="card-header">
                             <h1 className="card-title">Administrator Login</h1>
