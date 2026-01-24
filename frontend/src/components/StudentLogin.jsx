@@ -91,7 +91,7 @@ function StudentLogin() {
 
                         <p className="text-center mt-1">
                             <Link to="/" style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>
-                                ← Back to Home
+                                Student Portal Entry
                             </Link>
                         </p>
                     </div>

@@ -1,6 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import ProtectedRoute from './components/ProtectedRoute';
-import Home from './components/Home';
 import StudentRegister from './components/StudentRegister';
 import StudentLogin from './components/StudentLogin';
 import StudentDashboard from './components/StudentDashboard';
@@ -8,12 +7,14 @@ import AdminLogin from './components/AdminLogin';
 import AdminDashboard from './components/AdminDashboard';
 import AdminStudents from './components/AdminStudents';
 import AdminChangeRequests from './components/AdminChangeRequests';
+import AdminProfile from './components/AdminProfile';
 
 function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Navigate to="/student/login" replace />} />
+                <Route path="/admin" element={<Navigate to="/admin/login" replace />} />
                 <Route path="/student/register" element={<StudentRegister />} />
                 <Route path="/student/login" element={<StudentLogin />} />
                 <Route
@@ -30,6 +31,14 @@ function App() {
                     element={
                         <ProtectedRoute role="admin">
                             <AdminDashboard />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/admin/profile"
+                    element={
+                        <ProtectedRoute role="admin">
+                            <AdminProfile />
                         </ProtectedRoute>
                     }
                 />

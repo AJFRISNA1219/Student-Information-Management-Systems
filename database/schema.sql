@@ -17,7 +17,7 @@
 -- 5. Done! Database is ready to use.
 --
 -- DEFAULT CREDENTIALS:
---   Admin:   username = admin    | password = admin123
+--   Admin:   username = admin    | password = sims_admin_2026!
 --   Student: reg_num = STU2024001 | password = student123
 --   Student: reg_num = STU2024002 | password = student123
 --
@@ -81,10 +81,10 @@ CREATE TABLE change_requests (
 ) ENGINE=InnoDB;
 
 -- Insert default administrator account
--- Password: admin123
--- Hash generated using: password_hash('admin123', PASSWORD_BCRYPT)
+-- Password: sims_admin_2026!
+-- Hash generated using: password_hash('sims_admin_2026!', PASSWORD_BCRYPT)
 INSERT INTO administrators (username, password, full_name) VALUES 
-('admin', '$2y$10$e0MYzXyjpJS7Pd0RVvHwHeFtXPKKbKEP6OJeNcXS3UiF3tqXa8s6y', 'System Administrator');
+('admin', '$2y$10$0YHPkgEj1bHoBwzdNS4DUOO2Qe1Ydv9E8/XhNEB0r6A6w5Ce/P4KK', 'System Administrator');
 
 -- Insert sample student data for testing
 -- Password for all students: student123

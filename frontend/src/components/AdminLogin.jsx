@@ -92,13 +92,13 @@ function AdminLogin() {
                                 Default Admin Credentials:
                             </p>
                             <p style={{ color: 'var(--info)', fontWeight: '500' }}>
-                                Username: admin | Password: admin123
+                                Username: admin | Password: sims_admin_2026!
                             </p>
                         </div>
 
                         <p className="text-center mt-2">
-                            <Link to="/" style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>
-                                ← Back to Home
+                            <Link to="/admin" style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>
+                                Admin Portal Entry
                             </Link>
                         </p>
                     </div>
