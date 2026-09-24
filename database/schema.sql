@@ -17,7 +17,7 @@
 -- 5. Done! Database is ready to use.
 --
 -- DEFAULT CREDENTIALS:
---   Admin:   username = admin    | password = sims_admin_2026!
+--   Admin:   username = admin    | password = admin123
 --   Student: reg_num = STU2024001 | password = student123
 --   Student: reg_num = STU2024002 | password = student123
 --
@@ -81,10 +81,10 @@ CREATE TABLE change_requests (
 ) ENGINE=InnoDB;
 
 -- Insert default administrator account
--- Password: sims_admin_2026!
--- Hash generated using: password_hash('sims_admin_2026!', PASSWORD_BCRYPT)
+-- Password: admin123
+-- Hash generated using: password_hash('admin123', PASSWORD_BCRYPT)
 INSERT INTO administrators (username, password, full_name) VALUES 
-('admin', '$2y$10$0YHPkgEj1bHoBwzdNS4DUOO2Qe1Ydv9E8/XhNEB0r6A6w5Ce/P4KK', 'System Administrator');
+('admin', '$2y$10$dh7b/OANWMKSJkNlWwUiuuigIQ7NK/8iuLPby.TUS0ydnEwDtvSNG', 'System Administrator');
 
 -- Insert sample student data for testing
 -- Password for all students: student123
@@ -103,7 +103,7 @@ INSERT INTO students (
     '+1234567890', 
     2, 
     'Computer Science', 
-    '$2y$10$VvZvJGYcAZCgCIa.1cqy7OdGe7HtpYiSuZ5mFPGPOuXG8lxqQJ8ha',
+    '$2y$10$mWBV.ux1cudsmJbfWV4ZweWqs8Wek8oDJOmYsFg9I65uuC3uD00/i',
     85.50, 
     3.42, 
     '["Mathematics", "Programming", "Database Systems", "Web Development"]'
@@ -118,7 +118,7 @@ INSERT INTO students (
     '+1234567891', 
     1, 
     'Business Administration', 
-    '$2y$10$VvZvJGYcAZCgCIa.1cqy7OdGe7HtpYiSuZ5mFPGPOuXG8lxqQJ8ha',
+    '$2y$10$mWBV.ux1cudsmJbfWV4ZweWqs8Wek8oDJOmYsFg9I65uuC3uD00/i',
     90.25, 
     3.61, 
     '["Accounting", "Marketing", "Management", "Economics"]'

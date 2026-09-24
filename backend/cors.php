@@ -1,6 +1,13 @@
 <?php
-// Enable CORS for React frontend
-header('Access-Control-Allow-Origin: http://localhost:5173');
+// Enable CORS for React frontend (allow dynamic origin during development)
+// Allow all localhost dev origins for convenience during local development.
+// In production, restrict this to the actual frontend domain.
+if (isset($_SERVER['HTTP_ORIGIN']) && (strpos($_SERVER['HTTP_ORIGIN'], 'localhost') !== false || strpos($_SERVER['HTTP_ORIGIN'], '127.0.0.1') !== false)) {
+    header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+} else {
+    header('Access-Control-Allow-Origin: *');
+}
+
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type, Authorization');
 header('Access-Control-Allow-Credentials: true');

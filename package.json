@@ -1,0 +1,9 @@
+{
+  "name": "sims-project-root",
+  "private": true,
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "install": "cd frontend && npm install",
+    "build": "cd frontend && npm run build"
+  }
+}

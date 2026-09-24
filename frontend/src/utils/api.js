@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost/SIMS%20Project/backend/api',
+    baseURL: '/api',
     withCredentials: true,
     headers: {
         'Content-Type': 'application/json'
